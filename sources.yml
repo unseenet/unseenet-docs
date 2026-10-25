@@ -27,3 +27,33 @@ sources:
     ref: main
     docs: docs
     into: ""
+
+  - repo: unseenet/unseenet-gui        # /graphical/, /web/
+    ref: main
+    docs: docs
+    into: ""
+
+  - repo: unseenet/unseenet-portable   # /portable/, /updating/
+    ref: main
+    docs: docs
+    into: ""
+
+  - repo: unseenet/unseenet-bootable   # /bootable/
+    ref: main
+    docs: docs
+    into: ""
+
+  - repo: unseenet/unseenet-entrance   # /entrance/...
+    ref: main
+    docs: docs
+    into: ""
+
+  - repo: unseenet/unseenet-gateway    # /gateways/
+    ref: main
+    docs: docs
+    into: ""
+
+  - repo: unseenet/unseenet-bots       # /bots/
+    ref: main
+    docs: docs
+    into: ""
