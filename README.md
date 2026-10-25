@@ -1,4 +1,24 @@
-# unseenet-docs
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/unseenet/unseenet/main/assets/logo-dark.svg">
+    <img src="https://raw.githubusercontent.com/unseenet/unseenet/main/assets/logo-light.svg" alt="Unseenet" width="360">
+  </picture>
+</p>
+
+<h1 align="center">unseenet-docs</h1>
+
+<p align="center"><b>The site unseenet.org.</b><br>
+The front page, the guide, getting started and the project - and the docs of every Unseenet repository, gathered in one place.</p>
+
+<p align="center">
+  <a href="https://github.com/unseenet/unseenet-docs/actions/workflows/site.yml"><img src="https://github.com/unseenet/unseenet-docs/actions/workflows/site.yml/badge.svg" alt="site"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0"></a>
+</p>
+
+> **Pre-alpha.** Nothing is stable yet, and Unseenet has not had a security
+> review. Do not rely on it to protect anyone yet.
+
+## What it is
 
 The site [unseenet.org](https://unseenet.org): the front page, what Unseenet
 is and why, the guide (how it works, the threat model), getting started, and
@@ -11,11 +31,7 @@ in time the manuals of the terminal and graphical clients, the entrance, the
 gateway and the bots. Addresses on unseenet.org stay the same wherever a page
 lives.
 
-> **Being set up** ([unseenet#547](https://github.com/unseenet/unseenet/issues/547)).
-> The site is still published from unseenet/unseenet; this repository builds
-> the same site, page for page, and takes over when the domain is moved.
-
-## How it is built
+## How it works
 
 | | |
 |---|---|
@@ -33,7 +49,9 @@ pip install -r requirements.txt
 ./build.sh --local unseenet=../unseenet serve      # with your own checkout
 ```
 
-## Where does a page go?
+## Develop
+
+### Where does a page go?
 
 - **About one repository** (the node, a client, the entrance, a gateway):
   in that repository's `docs/`. Link to pages in other repositories with
@@ -44,18 +62,22 @@ pip install -r requirements.txt
 - **The protocol**: the UN-RFCs stay in unseenet's `rfc/`, next to the code
   that implements them, and are published under `/spec/`.
 
-## Part of Unseenet
+## Versions and releases
 
-Unseenet is made in several repositories, each released on its own:
+The site is built from `main` of every source each night, on every push
+here and by hand; it has no releases. Pages about what is not released yet
+say so.
+
+## Part of Unseenet
 
 | Repository | What it is |
 |---|---|
 | [unseenet](https://github.com/unseenet/unseenet) | The protocol (UN-RFCs), the core library, the node and the command-line client |
-| [unseenet-tui](https://github.com/unseenet/unseenet-tui) | The terminal client (moving here from unseenet, unseenet#548) |
+| [unseenet-tui](https://github.com/unseenet/unseenet-tui) | The terminal client |
 | [unseenet-gui](https://github.com/unseenet/unseenet-gui) | The graphical client - in a window, booted, or in a browser |
-| [unseenet-portable](https://github.com/unseenet/unseenet-portable) | Builds the portable clients, Terminal and Graphical, with Tor inside (unseenet#549) |
-| [unseenet-bootable](https://github.com/unseenet/unseenet-bootable) | Builds the bootable images, Terminal and Graphical, and later a node image (unseenet#550) |
-| [unseenet-docs](https://github.com/unseenet/unseenet-docs) | The site [unseenet.org](https://unseenet.org), gathering the docs of every repository (unseenet#547) |
+| [unseenet-portable](https://github.com/unseenet/unseenet-portable) | Builds the portable clients, Terminal and Graphical, with Tor inside |
+| [unseenet-bootable](https://github.com/unseenet/unseenet-bootable) | Builds the bootable images, Terminal and Graphical |
+| [unseenet-docs](https://github.com/unseenet/unseenet-docs) | The site [unseenet.org](https://unseenet.org) |
 | [unseenet-entrance](https://github.com/unseenet/unseenet-entrance) | Web entrances: the graphical client in an ordinary browser |
 | [unseenet-gateway](https://github.com/unseenet/unseenet-gateway) | Gateways to other networks: Usenet, Nostr, Matrix |
 | [unseenet-bots](https://github.com/unseenet/unseenet-bots) | Bots that keep channels filled with current content |
@@ -66,4 +88,4 @@ Unseenet is made in several repositories, each released on its own:
 
 ## License
 
-[Apache License 2.0](LICENSE), as in unseenet; the specification and the logo are [CC BY 4.0](https://github.com/unseenet/unseenet/blob/main/rfc/LICENSE.md).
+[Apache License 2.0](LICENSE). The Unseenet logo: CC BY 4.0.
