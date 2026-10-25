@@ -22,3 +22,8 @@ sources:
     into: ""
     spec: rfc
     src: src
+
+  - repo: unseenet/unseenet-tui     # the terminal client's manual: /client/
+    ref: main
+    docs: docs
+    into: ""
