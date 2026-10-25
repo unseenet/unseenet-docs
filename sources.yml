@@ -1,0 +1,24 @@
+# Where the pages of unseenet.org come from (unseenet#547).
+#
+# The site is built from this repository's pages/ (what belongs to the project
+# as a whole: the front page, About, the guide, the project) and from the docs/
+# every other repository keeps of what it holds. tools/gather.py checks each
+# source out and copies its docs into build/docs/ under `into`, keeping the
+# paths the pages had, so addresses on unseenet.org stay the same. Where a page
+# exists in both, the one in pages/ wins (and the build says so) - that only
+# happens while a page is being moved here.
+#
+#   repo:  owner/name on GitHub
+#   ref:   branch or tag (main: the docs follow the code as it is merged;
+#          pages about what is not released yet say so)
+#   docs:  the folder with its pages
+#   into:  where they go on the site ("" = the top)
+#   spec:  (unseenet only) the UN-RFCs, published under spec/
+#   src:   (unseenet only) the source the developers' reference is read from
+sources:
+  - repo: unseenet/unseenet
+    ref: main
+    docs: docs
+    into: ""
+    spec: rfc
+    src: src

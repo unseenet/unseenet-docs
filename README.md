@@ -1,10 +1,48 @@
 # unseenet-docs
 
-The site [unseenet.org](https://unseenet.org): the landing page, what Unseenet is and why, the guide (how it works, the threat model), getting started, and the project.
+The site [unseenet.org](https://unseenet.org): the front page, what Unseenet
+is and why, the guide (how it works, the threat model), getting started, and
+the project.
 
-It gathers, when it builds, the docs every other repository keeps in its own `docs/` - the CLI, node and developers' reference from unseenet, the manuals and guides of the terminal and graphical clients, the entrance, gateway and bots - and the UN-RFCs from unseenet's `rfc/`.
+It holds what belongs to the project as a whole, in `pages/`, and gathers,
+when it builds, the docs every other repository keeps of what it holds - the
+UN-RFCs, the node, the CLI and the developers' reference from unseenet, and
+in time the manuals of the terminal and graphical clients, the entrance, the
+gateway and the bots. Addresses on unseenet.org stay the same wherever a page
+lives.
 
-> **Being set up** ([unseenet#547](https://github.com/unseenet/unseenet/issues/547), part of [unseenet#391](https://github.com/unseenet/unseenet/issues/391)). Until it is, this lives in [unseenet](https://github.com/unseenet/unseenet).
+> **Being set up** ([unseenet#547](https://github.com/unseenet/unseenet/issues/547)).
+> The site is still published from unseenet/unseenet; this repository builds
+> the same site, page for page, and takes over when the domain is moved.
+
+## How it is built
+
+| | |
+|---|---|
+| [`sources.yml`](sources.yml) | which repositories the pages come from, and where they go on the site |
+| [`pages/`](pages/) | this repository's own pages, images, styles and scripts |
+| [`tools/gather.py`](tools/gather.py) | checks the sources out and puts everything in `build/docs/` |
+| [`mkdocs.yml`](mkdocs.yml) | the site: theme, navigation, plugins |
+| [`tools/docs_hooks.py`](tools/docs_hooks.py) | the newest versions on the front page, the About text from the core, the guide's drawings, where to edit each page |
+| [`site-extra/`](site-extra/) | files copied as they are (`.well-known`) |
+| [`.github/workflows/site.yml`](.github/workflows/site.yml) | builds on push, each night, by hand and when another repository asks; publishes when the variable `PAGES_LIVE` is `true` |
+
+```bash
+pip install -r requirements.txt
+./build.sh serve                                   # with the sources' main
+./build.sh --local unseenet=../unseenet serve      # with your own checkout
+```
+
+## Where does a page go?
+
+- **About one repository** (the node, a client, the entrance, a gateway):
+  in that repository's `docs/`. Link to pages in other repositories with
+  their full address on `https://unseenet.org/...`, so each repository's
+  own docs check stays strict.
+- **About the project as a whole** (the front page, why, the guide, the
+  project, getting help): here, in `pages/`.
+- **The protocol**: the UN-RFCs stay in unseenet's `rfc/`, next to the code
+  that implements them, and are published under `/spec/`.
 
 ## Part of Unseenet
 
@@ -28,4 +66,4 @@ Unseenet is made in several repositories, each released on its own:
 
 ## License
 
-[Apache License 2.0](LICENSE).
+Pages [CC BY 4.0](https://github.com/unseenet/unseenet/blob/main/rfc/LICENSE.md) like the specification; tools [Apache License 2.0](LICENSE).

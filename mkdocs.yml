@@ -3,7 +3,10 @@ site_description: Usenet, unseen - a decentralized, encrypted discussion network
 site_url: https://unseenet.org/
 repo_url: https://github.com/unseenet/unseenet
 repo_name: unseenet/unseenet
-edit_uri: edit/main/docs/
+# The pages come from several repositories; the hooks give each its own
+# "Edit" address from build/origins.json (tools/gather.py).
+edit_uri: ""
+docs_dir: build/docs
 copyright: Code Apache-2.0 · Specification and logo CC BY 4.0
 
 theme:
@@ -44,11 +47,11 @@ plugins:
       redirect_maps:
         concepts.md: guide/index.md
   # The developers' reference is generated from the docstrings (docs/developers/),
-  # read from the source without importing it.
+  # read from the core's source (build/src, from tools/gather.py) without importing it.
   - mkdocstrings:
       handlers:
         python:
-          paths: [src]
+          paths: [build/src]
           options:
             members_order: source
             filters: ["!^_"]

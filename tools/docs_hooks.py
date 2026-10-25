@@ -109,7 +109,7 @@ def versions() -> list[tuple[str, dict]]:
 
 def _git_tags() -> list[str]:
     try:
-        out = subprocess.run(["git", "tag", "--list", "v[0-9]*"],
+        out = subprocess.run(["git", "-C", "build/sources/unseenet", "tag", "--list", "v[0-9]*"],
                              capture_output=True, text=True, timeout=10, check=True)
         return out.stdout.split()
     except (OSError, subprocess.SubprocessError):
@@ -133,7 +133,7 @@ def _about_module(config):
     """core/about.py, loaded by path: the docs build installs only mkdocs, not unseenet."""
     import importlib.util
     path = os.path.join(os.path.dirname(config["config_file_path"]),
-                        "src", "unseenet", "core", "about.py")
+                        "build", "src", "unseenet", "core", "about.py")   # tools/gather.py
     spec = importlib.util.spec_from_file_location("unseenet_about_for_docs", path)
     mod = importlib.util.module_from_spec(spec)
     import sys
@@ -173,8 +173,25 @@ def _diagram_module(config):
     return _diagram
 
 
+_origins: dict | None = None
+
+
+def _edit_url(config, page_path: str) -> str | None:
+    """Where to edit a page: each repository edits its own (build/origins.json)."""
+    global _origins
+    if _origins is None:
+        path = os.path.join(os.path.dirname(config["config_file_path"]), "build", "origins.json")
+        try:
+            with open(path) as f:
+                _origins = json.load(f)
+        except OSError:
+            _origins = {}
+    return _origins.get(page_path)
+
+
 def on_page_markdown(markdown: str, page, config, files) -> str:
     global _lines
+    page.edit_url = _edit_url(config, page.file.src_uri)
     if "<!-- unseenet:diagram " in markdown:
         mod = _diagram_module(config)
         markdown = DIAGRAM.sub(lambda m: "\n" + mod.svg(m.group(1)) + "\n", markdown)
