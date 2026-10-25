@@ -66,4 +66,4 @@ Unseenet is made in several repositories, each released on its own:
 
 ## License
 
-Pages [CC BY 4.0](https://github.com/unseenet/unseenet/blob/main/rfc/LICENSE.md) like the specification; tools [Apache License 2.0](LICENSE).
+[Apache License 2.0](LICENSE), as in unseenet; the specification and the logo are [CC BY 4.0](https://github.com/unseenet/unseenet/blob/main/rfc/LICENSE.md).
