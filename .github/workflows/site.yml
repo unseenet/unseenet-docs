@@ -1,0 +1,60 @@
+name: site
+# Build unseenet.org from this repository's pages/ and the docs/ of every
+# repository in sources.yml (unseenet#547).
+#
+# Built on every push here, each night (the docs of the other repositories
+# follow their main, and the front page shows the newest releases), by hand,
+# and when another repository asks (repository_dispatch "docs", e.g. after a
+# release). Pull requests build only, strictly, to catch broken links.
+#
+# Published to GitHub Pages only when the repository variable PAGES_LIVE is
+# "true": until unseenet.org is moved here from unseenet/unseenet, this just
+# builds and keeps the site as an artifact to look at.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "47 4 * * *"          # after the nightly builds
+  workflow_dispatch:
+  repository_dispatch:
+    types: [docs]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DISABLE_MKDOCS_2_WARNING: "true"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: ./build.sh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}   # the front page asks for the newest releases
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    if: vars.PAGES_LIVE == 'true' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
