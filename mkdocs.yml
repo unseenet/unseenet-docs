@@ -112,6 +112,7 @@ nav:
       - Identity: guide/identity.md
       - Groups: guide/groups.md
       - Spam and reports: guide/spam.md
+      - Your own rules: guide/rules.md
       - The node: guide/node.md
       - The clients: guide/clients.md
       - Out into the world: guide/world.md
