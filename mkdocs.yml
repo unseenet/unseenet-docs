@@ -189,6 +189,11 @@ nav:
       - "0047 Team inboxes": spec/un-rfc-0047.md
       - "0048 Reactions": spec/un-rfc-0048.md
       - "0049 Imported posts": spec/un-rfc-0049.md
+      - "0050 Copying an identity": spec/un-rfc-0050.md
+      - "0051 Your own rules": spec/un-rfc-0051.md
+      - "0052 Tags": spec/un-rfc-0052.md
+      - "0053 Content labels": spec/un-rfc-0053.md
+      - "0054 Councils": spec/un-rfc-0054.md
   - The project:
       - People: project/people.md
       - The project's keys: project/keys.md
