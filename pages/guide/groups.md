@@ -121,6 +121,19 @@ random delay that otherwise hides where a post entered the network.
 That is what makes chat feel like chat, and it is a real trade-off: the
 client shows when a group has made it.
 
+**Chat is a way of writing, not a kind of privacy.** Who can read along
+is decided by where you write, never by whether it is a chat:
+
+| Where you write | Who can read it |
+|---|---|
+| a **private chat** or **private post** to one person | only the two of you - end-to-end encrypted |
+| a **closed group** (chat or posts) | only the members - end-to-end encrypted |
+| an **open group** (chat or posts) | anyone - signed, but public, like Usenet |
+
+So a chat group such as `unseenet.chat` is as public as any open
+discussion group. Your private chats are in the client's own list,
+apart from the groups.
+
 ### Reactions
 
 Under any post, comment or chat line, a reader can leave a **reaction**:
@@ -167,7 +180,9 @@ so knowing someone's key is enough to write to them privately. Each
 message is sealed to the owner's key, and the outside of it is signed
 with a key used only once, so nodes see neither what it says nor who
 sent it. Inside, the sender signs with their real key, so the owner knows
-who wrote.
+who wrote. Private posts and private chats both travel this way: a
+private chat is simply chat lines in each other's inboxes, one
+conversation per person.
 
 Inboxes are also how you reach a node's operator, and how posts reach the
 moderators of a moderated group.
