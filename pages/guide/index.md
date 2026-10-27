@@ -41,6 +41,12 @@ is shown (threads, chat, feed, pages). Owners, moderators, node operators
 and hierarchy maintainers each have a little power, and nobody has all
 of it. → [Groups](groups.md)
 
+**Spam is reported, not censored.** Anyone can publish signed spam
+reports; your client hides what the issuers you follow report - those a
+group or its hierarchy names for you by default, and those you choose -
+and always says by whom, one click from showing it. Reports to the people
+who can act on a post land where they read them. → [Spam and reports](spam.md)
+
 **Nodes are onion services.** Anyone can run one, on a Raspberry Pi or a
 free VM, with no public address. Nodes peer with nodes their operators
 choose, check everything they receive, and forget posts after the group's

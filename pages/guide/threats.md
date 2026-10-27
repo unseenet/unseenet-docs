@@ -151,7 +151,9 @@ them visible, and mostly lets you choose:
 
 - **Spam** costs postage - a small proof-of-work per post - and keys must
   ripen before they post cheaply, so throwaway keys are expensive. Nobody
-  decides who may post; the cost is the same for everyone.
+  decides who may post; the cost is the same for everyone. What gets
+  through, issuers you choose can report, and your client hides - never
+  silently ([Spam and reports](spam.md)).
 - **Flooding a node** with connections is limited by Tor's own
   proof-of-work defence for onion services, which nodes should turn on.
 - **Fake nodes** on the list new users are offered are checked from
