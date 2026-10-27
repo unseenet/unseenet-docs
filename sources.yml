@@ -57,3 +57,8 @@ sources:
     ref: main
     docs: docs
     into: ""
+
+  - repo: unseenet/unseenet-watchman   # /watchman/
+    ref: main
+    docs: docs
+    into: ""
