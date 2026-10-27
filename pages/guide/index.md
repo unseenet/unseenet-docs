@@ -47,6 +47,11 @@ group or its hierarchy names for you by default, and those you choose -
 and always says by whom, one click from showing it. Reports to the people
 who can act on a post land where they read them. → [Spam and reports](spam.md)
 
+**No algorithm - unless you write one.** Your feed is newest first and a
+group is its threads in order. If you want friends first or a subject out of
+sight, you write your own rules; they run only in your client and nobody
+else sees them. → [Your own rules](rules.md)
+
 **Nodes are onion services.** Anyone can run one, on a Raspberry Pi or a
 free VM, with no public address. Nodes peer with nodes their operators
 choose, check everything they receive, and forget posts after the group's
