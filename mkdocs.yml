@@ -123,6 +123,7 @@ nav:
       - Other newsreaders: other-clients.md
       - Gateways to other networks: gateways.md
       - Bots: bots.md
+      - The watchman (spam reports, labels): watchman.md
   - Running a node:
       - Installation: node/install.md
       - Configuration: node/configuration.md
