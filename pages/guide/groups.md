@@ -220,7 +220,8 @@ maintainer can block an identity across a hierarchy on nodes that honour
 it, and a node operator decides what their own node carries. And every
 reader decides which groups they follow at all. The chapter
 [Why it matters](why.md#what-nobody-controls-it-means-precisely) has the
-whole picture.
+whole picture, and [Spam and reports](spam.md) how spam and abuse are
+handled across groups without anyone getting that power.
 
 ## A group's life
 
