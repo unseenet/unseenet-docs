@@ -60,6 +60,76 @@ machine, a Raspberry Pi at home or a machine run by someone the project
 trusts will do; each runs with its own key, and the group's owner can
 remove any one of them without affecting the names the others signed.
 
+## Offering a replica
+
+You don't have to be part of the project to run a replica: more replicas,
+run by more people in more places, are what keep names working when a
+machine is taken down. What you take on:
+
+- **Your key gives out names.** For now every trusted registrar key can
+  sign a certificate on its own, so a replica is trusted with all names.
+  Keep the machine for the replica alone, keep it updated, and keep the
+  vault's passphrase where only root can read it.
+- **It should keep running.** A replica that is off now and then does no
+  harm - the others carry on, and it catches up when it starts - but one
+  that is gone for good should be taken out of the list.
+- **You learn little.** A replica sees which key claimed which name and
+  when, but not where from: claims arrive over Tor. Nothing about your
+  machine is published either - the group's manifest lists only the
+  replica's key.
+
+How it goes today:
+
+1. Write to the project in the group `unseenet.admin` (or open an issue on
+   GitHub) that you would like to run a replica, and roughly where it
+   would run - a VM provider, a Raspberry Pi at home - so that the replicas
+   do not end up in one place. You don't have to say who you are.
+2. Install the machine (step 1 of *Setting one up*).
+3. The owner of the group sends you the inbox key's seed in a **private
+   post** to the identity you wrote from. Type it in at `init` (step 2),
+   and don't keep it anywhere else.
+4. Send back the registrar key that `init` printed. It is public; the
+   owner lists it with `setup_registrar.py --add` (step 3).
+5. Start the service (step 4) and follow the journal. Once the owner has
+   listed your key, certificates signed with it appear in
+   `unseenet.names` with every new decision.
+
+If you stop, or the machine is lost or seized, tell the project, so your
+key is taken out of the list: certificates only your key signed stop
+counting, while the same decisions signed by the others stay valid.
+
+## Keeping it up to date
+
+All replicas must reach the same decisions, so update when a release asks
+for it (see `unseenet.announce`):
+
+```bash
+sudo -u unseenet bash -c 'cd ~/unseenet && git pull && .venv/bin/pip install -q -e .'
+sudo systemctl restart unseenet-registrar
+```
+
+A replica that decides differently for a while does no lasting harm: when
+it sees that another replica's certificate wins, it signs that decision
+too (UN-RFC 0019 section 6.8, rule 4).
+
+## A spare replica
+
+Because a replica keeps nothing of its own, a spare costs nothing but a
+vault in a safe place:
+
+1. Make a vault with a new registrar key of its own and the inbox key's
+   seed, with `init`, on any machine.
+2. Keep the vault and its passphrase with the project's backups - not on
+   a running replica - and note its registrar key. Don't list the key yet.
+3. When the replicas are gone - machines seized, a provider closed -
+   install a new machine, copy the vault there, have the owner list its
+   key, and start it. It rebuilds what it knows from the group and the
+   claim inbox and carries on.
+
+A spare must have a key of its own: never start a copy of a vault that is
+already running elsewhere. When the inbox key is changed, make the spare
+again with the new seed.
+
 ## Moving a replica
 
 A replica's vault holds its registrar key, so moving the vault moves the
@@ -96,3 +166,14 @@ network going down leaves the other giving out names.
   certificates do not. The owner makes a new one; for now that means
   removing `registrar_inbox` from the owner vault and running
   `setup_registrar.py` again, then giving every replica the new seed.
+
+## Where this is going
+
+Today the owner of the registrar's group - the project key - decides which
+replicas are trusted, so that one key is the registrar's weak point. The
+aim is a registrar that runs by itself: a group owned by a **council** of
+the replicas' keys, which admits a new replica once it has run as a
+shadow for a while and made the same decisions, and removes one that
+decides on its own - with no single key, the project's included, able to
+change who the replicas are. See
+[unseenet#683](https://github.com/unseenet/unseenet/issues/683).
