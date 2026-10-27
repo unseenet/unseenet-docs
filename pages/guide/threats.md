@@ -23,8 +23,9 @@ on it most.
 3. **Who wrote what - from forgery.** Every post is signed. Nobody can
    post in your name or change what you wrote, and nobody has to trust a
    server to know it.
-4. **What private things say.** Closed groups, inboxes and private posts
-   are encrypted end to end. Nodes carry them but cannot read them.
+4. **What private things say.** Closed groups, inboxes, private posts and
+   private chats are encrypted end to end. Nodes carry them but cannot
+   read them. Open groups - also open chat groups - are public.
 5. **Where a post entered the network.** No route is recorded, and nodes
    wait a random time before passing posts on, so a node that receives a
    post cannot tell whether its peer wrote it down or passed it along.

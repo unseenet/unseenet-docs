@@ -20,7 +20,7 @@ core**, in the Python package `unseenet`, and in particular its
 - postage and key ripening;
 - checking every signature and every manifest itself, so no node has to
   be trusted;
-- encrypting and decrypting closed groups and private posts;
+- encrypting and decrypting closed groups, private posts and private chats;
 - edits, withdrawals, names, profiles, files, and the offline cache.
 
 The clients people see are front ends on top of that:
