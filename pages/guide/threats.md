@@ -113,7 +113,7 @@ parts of your life.
   inboxes and closed groups: someone who gets an owner's key can read what
   was stored for it. Keep retention short for sensitive inboxes.
 - **What others already have.** A withdrawn post may still be kept by
-  people who read it, by software that ignores the rules, and by
+  people who read it, by software that ignores withdrawals, and by
   archives. Someone removed from a closed group keeps what they already
   received.
 - **Signatures cutting both ways.** A signed post is proof that your key

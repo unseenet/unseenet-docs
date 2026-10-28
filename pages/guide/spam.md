@@ -91,7 +91,7 @@ as before.
 
 ## Reporting a post
 
-When a post breaks a group's rules or the law, choose **Report** in its ⋯
+When a post goes against a group's charter or the law, choose **Report** in its ⋯
 menu - in a discussion, a feed, a comment or a chat (in the terminal client:
 **Report post** in the command palette). The report window shows the post,
 and you choose:
@@ -123,7 +123,7 @@ issuer, **Publish a spam report…**.
 
 Then:
 
-1. **Look at the post in its place** before you act. Read the group's rules.
+1. **Look at the post in its place** before you act. Read the group's charter.
 2. **Decide whether the report is right.** If not, do nothing. Nobody is told.
 3. **Act as far as your role reaches:**
     - *As an issuer*: publish a report of the post - and, if the author does
