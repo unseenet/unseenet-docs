@@ -45,7 +45,7 @@ the command line.
 | Script | Does |
 |--------|------|
 | `change_passphrase.py` | Encrypts the owner vault again under a new passphrase, checks that it opens, and keeps the old file until you delete it. |
-| `create_groups.py` | Lists every group the project owns, with its type, posters, view and rules. Creates those that do not exist yet, and gives existing ones a new manifest when their view, title, description, rules or `min_pow` differ from the list. |
+| `create_groups.py` | Lists every group the project owns, with its type, posters, view and charter. Creates those that do not exist yet, and gives existing ones a new manifest when their view, title, description, rules or `min_pow` differ from the list. |
 | `sign_release.py vX.Y.Z` | Signs a release's `SHA256SUMS.txt` with the project key and uploads `SHA256SUMS.txt.sig`, so [sticks](../bootable.md#updating) will update to it. Run it when the release's workflows are done. |
 | `share_poster.py REPO` | Puts the GitHub poster key into another of the project's repositories as a secret (unseenet-entrance, which posts new versions of the web client; unseenet-portable, which announces development builds). |
 | `poster_profile.py` | Publishes the GitHub poster's public profile with the bot mark, so readers who click its name see what it is: the About text from [`poster_profile.md`](https://github.com/unseenet/unseenet/blob/main/tools/project/poster_profile.md), the project's links and the project icon as its picture. Takes `--dry-run`. |

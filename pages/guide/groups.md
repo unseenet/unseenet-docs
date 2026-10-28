@@ -21,7 +21,7 @@ doubt which one is meant.
 
 The group's settings are in its **manifest**: a signed article that only
 the owner can write. It says what kind of group it is, who may post, who
-the moderators are, what the rules are and how the group should be
+the moderators are, what its charter says and how the group should be
 shown. When the owner changes something, they post a new manifest with a
 higher number, and every node and client takes the newest one. Because
 it is signed, every reader on every node sees the same settings, and no
@@ -190,12 +190,15 @@ moderators of a moderated group.
 A group can also be **local**: it then exists on one node only and is
 never passed on - used for things like a node operator's contact inbox.
 
-## Rules, pins and how long things last
+## Charter, pins and how long things last
 
-- **Rules.** The owner can write the group's purpose and rules - its
-  charter - into the manifest. Every client shows them before a reader
-  first posts, and because they are signed, they are the same for
-  everyone.
+- **Charter.** The owner can write the group's **charter** into the
+  manifest: what the group is for and what it asks of those who write
+  there. Every client shows it before a reader first posts, and because it
+  is signed, it is the same for everyone. No machine enforces it -
+  moderators and the owner act on it. It is not the same as
+  [your own rules](rules.md), which only you write and your client
+  applies to what you see.
 - **Retention.** Posts are kept for a period the owner suggests, 90 days
   by default, and a node may keep them shorter. After that the network
   forgets them.
@@ -246,7 +249,7 @@ handled across groups without anyone getting that power.
 [0008](../spec/un-rfc-0008.md) (chat, views, data groups),
 [0009](../spec/un-rfc-0009.md) (inboxes),
 [0013](../spec/un-rfc-0013.md) (removing groups),
-[0014](../spec/un-rfc-0014.md) (rules),
+[0014](../spec/un-rfc-0014.md) (charters),
 [0015](../spec/un-rfc-0015.md) (handing over),
 [0018](../spec/un-rfc-0018.md) (hierarchies),
 [0028](../spec/un-rfc-0028.md) (chats and posts),

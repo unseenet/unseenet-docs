@@ -137,18 +137,18 @@ between several parties, so that nobody rules alone:
 
 | Party | Decides |
 |-------|---------|
-| **Group owner** | the group's type, who may post, who may read a closed group, the moderators, the rules |
+| **Group owner** | the group's type, who may post, who may read a closed group, the moderators, the charter |
 | **Node operator** | which groups and peers their node carries, how long it keeps posts, how much postage it asks |
 | **Hierarchy maintainer** | which group a name in its hierarchy means, and blocks of identities across it |
-| **Reader** | what they see: which groups and feeds they follow |
+| **Reader** | what they see: which groups and feeds they follow, and their own rules |
 
 In detail:
 
 - **The author** can withdraw or edit their own post. Withdrawing is best
   effort: nodes delete it and stop passing it on, but people who already
-  read it, and software that ignores the rules, may keep it.
+  read it, and software that ignores withdrawals, may keep it.
 - **A group's owner and moderators** can withdraw posts and ban people *in
-  that group*. They decide the group's rules, and they have no power
+  that group*. They write the group's charter, and they have no power
   anywhere else.
 - **A node operator** decides which groups their own node carries, and can
   delete anything from it. That affects only that node; the same posts

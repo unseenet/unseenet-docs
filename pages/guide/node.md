@@ -37,7 +37,7 @@ where it is.
 ## What a node does all day
 
 - **It accepts posts from clients** and checks every one: signature,
-  postage, the group's rules, age. It does not trust anybody, including
+  postage, who may post in the group, age. It does not trust anybody, including
   its own users.
 - **It passes posts on to its peers** - after a random delay, without
   recording where they came from - and takes theirs.

@@ -10,6 +10,11 @@ for - the old Usenet idea of a *scorefile*.
 them, no node knows them, and they never change what anyone else sees. Without
 rules everything is as it always is.
 
+Only these are called *rules*. What a group's owner writes about the group - what
+it is for, what it asks of you - is the group's [charter](groups.md#charter-pins-and-how-long-things-last):
+it is shown to you, and no machine applies it. *The charter is what the group asks of
+you; your rules are what you choose to see.*
+
 Open them with **Ctrl+P → Your rules** in the graphical and the terminal client,
 or `unseenet rules` on the command line. The editor checks every line as you type
 and says what is wrong, with a suggestion where it can.

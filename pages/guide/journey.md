@@ -138,7 +138,7 @@ quoting her. His reply makes the same journey back.
   withdraw the old one, and clients show the new one in its place.
 - **Maja can withdraw it**, and so can the group's owner and moderators.
   Nodes delete it and stop passing it on. It is best effort: anyone who
-  already read it, or software that ignores the rules, may still have it.
+  already read it, or software that ignores withdrawals, may still have it.
 - **After the group's retention period** - 90 days by default - nodes
   forget it and refuse it if it is offered again.
 
