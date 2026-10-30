@@ -1,5 +1,35 @@
 # Getting help
 
+## The groups you start with
+
+A new identity does not start with an empty list. Both clients follow
+these groups from the first start, so there is something to read and a
+place to ask:
+
+| Group | What it is |
+|-------|------------|
+| `unseenet.help` | Questions and answers - see below |
+| `unseenet.help.news` | What is new, in plain words: the help bot tells about each round of releases, and you can ask about it under the post |
+| `unseenet.announce` | The official release notes, as GitHub has them - for every repository, not only the core |
+| `unseenet` | Talk about the project itself |
+| `unseenet.chat` | The project's chat group, linked to the Matrix room `#unseenet:unseenet.org` |
+| `unseenet.test` | Try things here - post, reply, react - without bothering anyone |
+| `unseenet.demo.feed`, `unseenet.demo.site` | The demo: a feed and a site of made-up people, so there is something to look at |
+
+They are ordinary groups: leave any of them, and your client will not add
+it again. When the project adds a starter group later, clients that started
+earlier get that one group too, once.
+
+### The demo
+
+The people in `unseenet.demo.*` do not exist. Mira and her guinea pigs,
+Tomas the beekeeper, Nadia the baker, Ole the radio amateur and Ines, who
+walks and looks at stars, post pictures, write pages and comment on each
+other, so a new user can see what a feed, a site and a timeline look like
+before anyone they know is on Unseenet. Comment and react as much as you
+like: everything is reset every Monday, comments included. See
+[People](project/people.md#made-up-people).
+
 ## Ask in unseenet.help
 
 New clients follow `unseenet.help` from the start - in the terminal client
