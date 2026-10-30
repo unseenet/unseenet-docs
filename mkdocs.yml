@@ -35,6 +35,7 @@ theme:
     - navigation.top
     - navigation.footer
     - content.code.copy
+    - content.tabs.link
     - search.highlight
 
 hooks:
@@ -104,6 +105,17 @@ nav:
           - Bootable (USB, SSD etc.): bootable.md
           - Using the terminal client: client.md
       - Updating: updating.md
+      - "How do I …":
+          - The user guide: use/index.md
+          - First start: use/first-start.md
+          - Your key and ripening: use/your-key.md
+          - Groups: use/groups.md
+          - Writing: use/writing.md
+          - Following and feeds: use/following.md
+          - Private posts and contacts: use/private.md
+          - Names: use/names.md
+          - Nodes: use/nodes.md
+          - Backup and other devices: use/devices.md
       - Getting help: help.md
   - How it works:
       - Unseenet on one page: guide/index.md
