@@ -6,6 +6,12 @@ All notable changes to unseenet-docs are listed here. The format follows
 
 ## [Unreleased]
 
+- **Show your name elsewhere** (#8): the Unseenet mark at 16, 24 and 32 px, light and
+  dark, and snippets for a website, a mail signature and Markdown, after UN-RFC 0019
+  section 8.5.
+- `tools/guide_site.py` (#7): the guide as a folder of UN-RFC 0031 pages, which the
+  core's `publish-guide` workflow publishes as the site `unseenet.help.guide`.
+
 - **The user guide** (#6): *Getting started → How do I …*, ten task pages -
   first start, your key and ripening, groups, writing, following and feeds,
   private posts and contacts, names, nodes, backup and other devices - each

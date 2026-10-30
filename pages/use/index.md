@@ -19,6 +19,7 @@ they matter, and link to [How it works](../guide/index.md) for the why.
 | follow people and feeds, and have my own | [Following and feeds](following.md) |
 | write to one person | [Private posts, chats and contacts](private.md) |
 | get a name like `@you` | [Names](names.md) |
+| put my name on a website or in a signature | [Show your name elsewhere](show-your-name.md) |
 | use another node, or several | [Nodes](nodes.md) |
 | keep my identity safe, or use it on another device | [Backup and other devices](devices.md) |
 

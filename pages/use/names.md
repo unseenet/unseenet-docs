@@ -44,5 +44,11 @@ year and are renewed from the same place.
 Whatever names others hold, the name **you** gave a contact always wins in
 your client. That is what keeps a look-alike name from fooling you.
 
+## On a website or in a signature
+
+Outside Unseenet, write it as `Unseenet: andreas@lorensen` and link it to
+your key - [Show your name elsewhere](show-your-name.md) has the icon and
+snippets to copy.
+
 **More:** [Identity](../guide/identity.md#names) in *How it works* and
 [UN-RFC 0019](../spec/un-rfc-0019.md) (names).
