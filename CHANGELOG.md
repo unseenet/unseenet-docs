@@ -6,6 +6,12 @@ All notable changes to unseenet-docs are listed here. The format follows
 
 ## [Unreleased]
 
+- **The user guide** (#6): *Getting started → How do I …*, ten task pages -
+  first start, your key and ripening, groups, writing, following and feeds,
+  private posts and contacts, names, nodes, backup and other devices - each
+  with a *Graphical* and a *Terminal* tab and screenshots of both. The tab you
+  choose is kept on every page (`content.tabs.link`).
+
 - *Getting help* lists the groups a new client starts with - including
   `unseenet.help.news` and the demo - and what each is for.
 
