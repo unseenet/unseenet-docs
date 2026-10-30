@@ -92,8 +92,8 @@ familiar ones:
 |------------------|-------------|-----------|
 | Usenet, forums, Reddit | **Discussion groups**: threads, one post at a time, reply by quoting | now |
 | Discord, Matrix, IRC | **Chat groups**: quick lines that keep the conversation going | now |
-| Facebook, X, Mastodon | **Feeds** and a **timeline** of the people and feeds you follow | from 0.5.0 |
-| Personal pages, blogs, wikis | **Sites**: small sets of Markdown pages, with pictures | from 0.5.0 |
+| Facebook, X, Mastodon | **Feeds** and a **timeline** of the people and feeds you follow | now |
+| Personal pages, blogs, wikis | **Sites**: small sets of Markdown pages, with pictures | now |
 | Direct messages, e-mail | **Private chats and private posts**, end-to-end encrypted | now |
 | A contact form, "write to the admin" | **Inboxes**: anyone may write, only the owner reads | now |
 

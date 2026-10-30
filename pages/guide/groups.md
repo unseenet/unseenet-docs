@@ -85,8 +85,8 @@ Separately from the type, the owner says how the group should be
 |------|----------|
 | **threads** | a thread tree, read one post at a time, replies quoting what they answer |
 | **chat** | a running conversation, newest at the bottom |
-| **feed** | posts newest first, with the comments under each *(from 0.5.0)* |
-| **pages** | a small site of Markdown pages *(channels only, from 0.5.0)* |
+| **feed** | posts newest first, with the comments under each |
+| **pages** | a small site of Markdown pages *(channels only)* |
 | **data** | not shown to people at all - lists and certificates clients read in the background |
 
 The view is a hint, not a rule: a reader may switch a feed to threads or
@@ -153,7 +153,7 @@ Two things are worth knowing. Reactions are **public**: anyone can see
 which key reacted to what, as with a comment. And they are **only
 counted, never used**: no client sorts or hides posts by how many
 reactions they have, so a bought pile of likes buys nothing but a
-number. *(From 0.5.0.)*
+number.
 
 ## Closed groups
 
@@ -204,7 +204,7 @@ never passed on - used for things like a node operator's contact inbox.
   forgets them.
 - **Pins.** The owner and moderators can pin a few posts - a welcome
   message, a FAQ - which then stay beyond the retention period and show
-  at the top, in the threads view and in the chat view. *(From 0.5.0.)*
+  at the top, in the threads view and in the chat view.
 
 ## Moderation
 

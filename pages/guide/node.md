@@ -105,7 +105,7 @@ only:
 - **How long to keep posts**, within the group's own retention.
 - **How much postage to ask** - more makes spam dearer.
 - **Whether to honour maintainers' blocks** across a hierarchy.
-- **Whether to carry files and sites** *(from 0.5.0)*. Pictures and
+- **Whether to carry files and sites**. Pictures and
   other small files are stored as separate **blobs** next to the posts
   that use them; sites keep their pages beyond the retention period.
   Both take disk and both mean hosting more of other people's content,
