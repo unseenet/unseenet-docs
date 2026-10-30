@@ -195,6 +195,9 @@ nav:
       - "0052 Tags": spec/un-rfc-0052.md
       - "0053 Content labels": spec/un-rfc-0053.md
       - "0054 Councils": spec/un-rfc-0054.md
+      - "0055 What a node carries": spec/un-rfc-0055.md
+      - "0056 A group's own emoji": spec/un-rfc-0056.md
+      - "0057 A people directory": spec/un-rfc-0057.md
   - The project:
       - People: project/people.md
       - The project's keys: project/keys.md

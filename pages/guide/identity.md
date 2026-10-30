@@ -58,11 +58,14 @@ What the vault cannot protect against is just as important:
 - losing the vault *and* every copy of it. There is no "forgot my
   password" link, because there is nobody to send it. Keep a copy.
 
-!!! info "Coming in 0.5.0: your state in the network"
-    Today, the groups you follow and what you have read live only in your
-    vault, so a new stick or the browser client starts empty. From 0.5.0
-    each identity can keep that state in the network itself, encrypted so
-    only its key can read it, and the vault only has to hold the keys.
+!!! info "Your state travels with your key"
+    The groups you follow, what you have read, your contacts and the chats
+    you have closed live in the network, not only in the vault: each
+    identity keeps them in its own key-bound group, `state@<fingerprint>`,
+    encrypted so only its key can read them. So a second stick, another
+    computer or the browser client picks up where you left off. What
+    stays in the vault alone is what must never leave it: your keys and
+    the secrets of closed groups you are in.
 
 ## Names
 
@@ -216,7 +219,7 @@ at most two years, so the network does not fill up with the ghosts of
 abandoned identities. The same goes for an identity's inbox and its
 other personal groups.
 
-!!! info "Coming in 0.6.0: attestations"
+!!! info "Planned: attestations"
     A way for others to vouch for a key - "this really is the Andreas I
     know" - so that people who want to be recognised can be, without
     anyone central deciding who is real.
