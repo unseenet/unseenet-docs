@@ -152,6 +152,7 @@ nav:
       - New versions, the mirror and blocking: entrance/updates.md
       - Being listed: entrance/listed.md
       - Your responsibility: entrance/responsibility.md
+  - Running a replica: replica.md
   - Specification:
       - The UN-RFC series: spec/index.md
       - "0000 Process": spec/un-rfc-0000.md
