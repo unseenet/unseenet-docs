@@ -117,7 +117,7 @@ check of 0025, and:
 
 ## Testing against the network
 
-- The project's test nodes and the group `unseenet.test` are there to be
+- The project's test nodes and the group `test.unseenet` are there to be
   posted in by new software. Test nodes may be reset.
 - The project's own code is the reference: when your implementation and
   it disagree, check the UN-RFC - and if the UN-RFC is unclear, that is

@@ -56,7 +56,7 @@ project's nodes. Code: [unseenet-watchman](https://github.com/unseenet/unseenet-
 
 ## Made-up people
 
-The groups under `unseenet.demo.*` are full of people who do not exist:
+The groups under `demo.unseenet.*` are full of people who do not exist:
 Mira and her guinea pigs, Tomas the beekeeper, Nadia the baker, Ole the
 radio amateur and Ines, who walks and looks at stars. They are there so a
 new user has something to see. Everything they post is reset every

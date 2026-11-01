@@ -13,16 +13,27 @@ place to ask:
 | `unseenet.announce` | The official release notes, as GitHub has them - for every repository, not only the core |
 | `unseenet` | Talk about the project itself |
 | `unseenet.chat` | The project's chat group, linked to the Matrix room `#unseenet:unseenet.org` |
-| `unseenet.test` | Try things here - post, reply, react - without bothering anyone |
-| `unseenet.demo.feed`, `unseenet.demo.site` | The demo: a feed and a site of made-up people, so there is something to look at |
+| `test.unseenet` | Try things here - post, reply, react - without bothering anyone |
+| `demo.unseenet.feed`, `demo.unseenet.site` | The demo: a feed and a site of made-up people, so there is something to look at |
 
 They are ordinary groups: leave any of them, and your client will not add
 it again. When the project adds a starter group later, clients that started
 earlier get that one group too, once.
 
+Every node carries the project's own groups in `unseenet.*`, so they hold
+only text. Groups where anything may be posted, or with pictures and sites,
+live in free hierarchies instead: `test.unseenet` (until 0.6.9:
+`unseenet.test`), the demo in `demo.unseenet.*` (until 0.6.9:
+`unseenet.demo.*`), and the user guide in `docs.unseenet.clients`. A client
+that followed the old groups follows the new ones in their place.
+
+The user guide is also in the network, as the site
+`docs.unseenet.clients` - useful where the web is out of reach, such as on
+the [bootable client](bootable.md).
+
 ### The demo
 
-The people in `unseenet.demo.*` do not exist. Mira and her guinea pigs,
+The people in `demo.unseenet.*` do not exist. Mira and her guinea pigs,
 Tomas the beekeeper, Nadia the baker, Ole the radio amateur and Ines, who
 walks and looks at stars, post pictures, write pages and comment on each
 other, so a new user can see what a feed, a site and a timeline look like

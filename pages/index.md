@@ -301,9 +301,9 @@ Pick what you want to do. Each path lists the pages in the order to read them.
       <button type="button" class="un-copy" data-copy="unseenet.help@ph5fc5hop5232qsz" hidden>Copy</button>
     </li>
     <li>
-      <code class="un-groups__name">unseenet.test@ph5fc5hop5232qsz</code>
+      <code class="un-groups__name">test.unseenet@ph5fc5hop5232qsz</code>
       <span class="un-groups__for">Test posts: say hello, try replies</span>
-      <button type="button" class="un-copy" data-copy="unseenet.test@ph5fc5hop5232qsz" hidden>Copy</button>
+      <button type="button" class="un-copy" data-copy="test.unseenet@ph5fc5hop5232qsz" hidden>Copy</button>
     </li>
   </ul>
   <p class="un-talk__node"><span class="un-talk__key">Test node:</span>

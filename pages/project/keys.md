@@ -45,7 +45,7 @@ the command line.
 | Script | Does |
 |--------|------|
 | `change_passphrase.py` | Encrypts the owner vault again under a new passphrase, checks that it opens, and keeps the old file until you delete it. |
-| `create_groups.py` | Lists every group the project owns, with its type, posters, view and charter. Creates those that do not exist yet, and gives existing ones a new manifest when their view, title, description, rules or `min_pow` differ from the list. |
+| `create_groups.py` | Lists every group the project owns, with its type, posters, view and charter. Creates those that do not exist yet, and gives existing ones a new manifest when their view, title, description, charter or `min_pow` differ from the list. Groups the project moved (`MOVED`: `unseenet.test`, `unseenet.help.guide`) are removed from the network once. |
 | `sign_release.py vX.Y.Z` | Signs a release's `SHA256SUMS.txt` with the project key and uploads `SHA256SUMS.txt.sig`, so [sticks](../bootable.md#updating) will update to it. Run it when the release's workflows are done. |
 | `share_poster.py REPO` | Puts the GitHub poster key into another of the project's repositories as a secret (unseenet-entrance, which posts new versions of the web client; unseenet-portable, which announces development builds). |
 | `poster_profile.py` | Publishes the GitHub poster's public profile with the bot mark, so readers who click its name see what it is: the About text from [`poster_profile.md`](https://github.com/unseenet/unseenet/blob/main/tools/project/poster_profile.md), the project's links and the project icon as its picture. Takes `--dry-run`. |
@@ -61,7 +61,7 @@ project's list.
 | Group | Type | Who posts |
 |-------|------|-----------|
 | `unseenet` | open | anyone |
-| `unseenet.test` | open | anyone |
+| `test.unseenet` | open | anyone: try things out (until 0.6.9 `unseenet.test`) |
 | `unseenet.help` | open | anyone: questions; the help bot answers from the docs ([unseenet-helpbot](https://github.com/unseenet/unseenet-helpbot)) |
 | `unseenet.announce` | channel | the GitHub poster: releases and news |
 | `unseenet.nodes` | channel | the GitHub poster: the node list ([UN-RFC 0010](../spec/un-rfc-0010.md)) |
@@ -70,6 +70,8 @@ project's list.
 | `unseenet.hierarchies` | channel | the GitHub poster: the root list ([UN-RFC 0018](../spec/un-rfc-0018.md)) |
 | `unseenet.checkgroups` | channel | the GitHub poster: the groups of `unseenet.*` (UN-RFC 0018 section 5) |
 | `unseenet.canary` | channel | the GitHub poster: daily connection checks ([UN-RFC 0021](../spec/un-rfc-0021.md)) |
+| `unseenet.nodes.announce` | open | every node: its own announcement, signed with its node key ([UN-RFC 0055](../spec/un-rfc-0055.md) section 5) |
+| `docs.unseenet.clients` | channel, site | the GitHub poster: the user guide, published from this site |
 | `unseenet.names` | channel | the registrar's replicas ([UN-RFC 0019](../spec/un-rfc-0019.md)) |
 | `unseenet.admin` | open | anyone: hierarchy requests and name disputes |
 | `alt.news.wikipedia` | channel, feed, comments open (14 days), pictures | the news bot: one post per story in Wikipedia's *In the news*; anyone comments |
