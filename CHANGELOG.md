@@ -6,11 +6,18 @@ All notable changes to unseenet-docs are listed here. The format follows
 
 ## [Unreleased]
 
+- **Following the core's changes for 0.6.9 and 0.7.0**: the test group is
+  `test.unseenet`, the demo `demo.unseenet.*`, and the guide in the network
+  `docs.unseenet.clients` (unseenet#821) - in *Getting help*, the front page, *People*,
+  *Keys* and *Building*; *Keys* lists `unseenet.nodes.announce` and the guide's group,
+  and what `create_groups.py` removes. *Running a node* and *Why* tell that a node
+  chooses its hierarchies and always carries the network's own groups, and that a node
+  announces itself (UN-RFC 0055).
 - **Show your name elsewhere** (#8): the Unseenet mark at 16, 24 and 32 px, light and
   dark, and snippets for a website, a mail signature and Markdown, after UN-RFC 0019
   section 8.5.
 - `tools/guide_site.py` (#7): the guide as a folder of UN-RFC 0031 pages, which the
-  core's `publish-guide` workflow publishes as the site `unseenet.help.guide`.
+  core's `publish-guide` workflow publishes as the site `docs.unseenet.clients`.
 
 - **The user guide** (#6): *Getting started → How do I …*, ten task pages -
   first start, your key and ripening, groups, writing, following and feeds,

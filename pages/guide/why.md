@@ -150,8 +150,9 @@ In detail:
 - **A group's owner and moderators** can withdraw posts and ban people *in
   that group*. They write the group's charter, and they have no power
   anywhere else.
-- **A node operator** decides which groups their own node carries, and can
-  delete anything from it. That affects only that node; the same posts
+- **A node operator** decides which groups their own node carries - apart
+  from the network's own groups in `unseenet.*`, which every node carries -
+  and can delete anything else from it. That affects only that node; the same posts
   live on at the others.
 - **A hierarchy maintainer**, such as whoever looks after `dk.*`, can block
   an identity across the hierarchy - for example someone who posts threats

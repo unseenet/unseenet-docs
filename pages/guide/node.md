@@ -80,6 +80,11 @@ connected, the client reads the newest list from the network itself,
 signed by a publisher it trusts. It is a starting point, not a directory:
 any node can be used, and anyone can publish a list.
 
+A node can also make itself known: it **announces itself** in a group every
+node carries, signed with its own node key - its address, its name and which
+hierarchies it carries. Nobody has to approve it, and a client checks a node
+before using it.
+
 To be on the project's list, a node must really be part of the network.
 It must exchange posts with the other listed nodes in both directions,
 and carry the groups they carry - except groups it openly says it leaves
@@ -97,6 +102,11 @@ Running a node means carrying posts written by other people. The
 operator has real choices about that, all of them about their own node
 only:
 
+- **Which hierarchies to carry**: everything, or only some, such as only
+  `alt.*`, only `palaestina.*` or only an association's `forening.*`. Every
+  node always carries the network's own groups in `unseenet.*` - the lists
+  of nodes, hierarchies and names, and the project's talk and help - so no
+  node can hide which nodes carry what.
 - **Which new groups to take**: every new group (`accept`, fine among
   friends), only groups created by owners the operator trusts
   (`trusted`), or none without asking (`manual`).
