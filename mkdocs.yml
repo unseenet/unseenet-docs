@@ -129,6 +129,7 @@ nav:
       - The node: guide/node.md
       - The clients: guide/clients.md
       - Out into the world: guide/world.md
+      - Who runs Unseenet?: guide/council.md
       - The threat model: guide/threats.md
       - Build your own: guide/build.md
       - Tor and Tails: tor.md
