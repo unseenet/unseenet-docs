@@ -91,11 +91,14 @@ so a client can check a name without asking anyone. Names that are
 Internet top-level domains, such as `@dk` or `@microsoft`, cannot be
 registered.
 
-The registrar is not a central point of failure. It runs as several
-**replicas** on different machines, any one of which can answer, and the
-names already given out keep working even if every replica is off -
-the certificates are in the posts. And a registrar has no power over
-anyone: it cannot stop an identity posting, change a post or remove one.
+The registrar is not a central point of failure. From version 0.7.0 it
+is a **council** ([Who runs Unseenet?](council.md)): several replicas on
+different machines, each signing with its own key, that decide every
+claim by the same public rules, and that only together can change who
+is in the council. The names already given out keep working even if
+every replica is off - the certificates are in the posts. And a
+registrar has no power over anyone: it cannot stop an identity posting,
+change a post or remove one.
 An identity without a name can do everything an identity with one can,
 and clients must not treat it as less trustworthy.
 
@@ -126,11 +129,17 @@ That is why names can be as simple as they are:
 In the client you press `@`, type the name you want and claim it.
 
 - **A registered name** such as `lorensen` is first come, first served:
-  three to thirty-two lowercase letters, digits and hyphens, no dot. The
-  claim is sent sealed to the registrar's inbox, with a little extra
-  postage so that grabbing hundreds of names costs something. The
-  registrar answers in your private messages, usually within an hour,
-  with the certificate. It lasts a year; your client renews it by itself
+  three to thirty-two lowercase letters, digits and hyphens, no dot.
+  The claim is public, and the client says so before it sends it. It
+  goes out in two steps, with a little extra postage so that grabbing
+  hundreds of names costs something: first a sealed promise of the
+  claim, then the claim itself, which your client sends by itself once
+  the promise is an hour old - so nobody can see your claim and get in
+  ahead of it. The registrar answers in your private messages with the
+  certificate, usually within a few hours. Claims are decided in the
+  order of their promises, so if an earlier promise is still waiting
+  for its claim, the answer can take up to about a week. The
+  certificate lasts a year; your client renews it by itself
   in the last month while it runs (or you do, under `@`), and for 30 days
   after it runs out nobody but you can take it. A key can hold at most
   three registered names, and a few names - such as
