@@ -181,4 +181,5 @@ them visible, and mostly lets you choose:
 [0023](../spec/un-rfc-0023.md) (gateways),
 [0025](../spec/un-rfc-0025.md) (key ripening),
 [0043](../spec/un-rfc-0043.md) (web entrances).
-See also [Tor and Tails](../tor.md).
+See also [Tor and Tails](../tor.md), and [How robust is it?](robustness.md) for the
+network as a whole: what keeps working when parts of it fail, and where it is fragile.

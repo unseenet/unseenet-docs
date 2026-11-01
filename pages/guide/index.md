@@ -78,6 +78,11 @@ you from what you write yourself, from a compromised computer, or from
 someone watching the whole internet - and it has not been reviewed yet.
 → [The threat model in plain words](threats.md)
 
+**Honest about the network, too.** Signatures mean no server is ever
+trusted to tell the truth, and nodes can come and go. But today the
+network has few nodes, one maintainer and one project key that still signs
+the lists and the releases. → [How robust is it?](robustness.md)
+
 **Build your own.** Everything is written down in the UN-RFCs, so anyone
 can build a compatible node, client or gateway in any language - or build
 on the project's core. → [Build your own](build.md)
