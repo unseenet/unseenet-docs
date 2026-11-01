@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The user guide as a folder for an Unseenet site: unseenet.help.guide (#7).
+"""The user guide as a folder for an Unseenet site: docs.unseenet.clients (#7).
 
     python tools/guide_site.py build/docs OUT
 
@@ -7,7 +7,7 @@ Reads the guide's pages (build/docs/use/, after tools/gather.py has put the
 pictures from unseenet-gui beside them) and writes OUT/: one Markdown file per
 page and the pictures they show, for the core's site import to publish:
 
-    unseenet site-publish OUT unseenet.help.guide@ph5fc5hop5232qsz --yes
+    unseenet site-publish OUT docs.unseenet.clients@ph5fc5hop5232qsz --yes
 
 UN-RFC 0031 Markdown has no tabs, admonitions or keyboard keys, so:
 
