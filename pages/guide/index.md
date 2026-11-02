@@ -72,6 +72,12 @@ to another network. Nothing encrypted ever goes through a door.
 node learns where its users are, and nobody watching your connection sees
 what you read or write. → [Tor and Tails](../tor.md)
 
+**Nobody in charge.** The few things the network shares - names, and in
+time the lists of nodes, hierarchies, entrances and gateways - are kept
+by councils: keys that change something only when a majority signs the
+same change, by rules anybody can check. Anybody can become a member,
+slowly and in public. → [Who runs Unseenet?](council.md)
+
 **Honest about the limits.** Unseenet hides where people and servers are,
 proves who wrote what and keeps private things private. It cannot protect
 you from what you write yourself, from a compromised computer, or from

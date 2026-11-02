@@ -1,5 +1,15 @@
 # Running a registrar replica
 
+!!! note "The registrar has moved to a council"
+    From version 0.7.0 the project's registrar is a council
+    ([UN-RFC 0054](../spec/un-rfc-0054.md), [Who runs
+    Unseenet?](../guide/council.md)). A council member runs
+    `unseenet-replica`, not `unseenet-registrar`, and anybody can start
+    one as a shadow without asking: see [Running a
+    replica](https://github.com/unseenet/unseenet/blob/main/docs/replica.md).
+    This page describes the registrar as it was before the move, for
+    registrars that are not councils.
+
 The registrar gives out names for identities, such as `@lorensen`
 ([UN-RFC 0019](../spec/un-rfc-0019.md)). It runs as several **replicas**,
 each on its own machine, so that names keep being given out and renewed
