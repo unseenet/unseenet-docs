@@ -72,6 +72,15 @@ peers what is new and fetching what it missed - first each group's state,
 then the posts that depend on it. So a sleeping node loses nothing, and a
 new node gets whole groups, not just what arrives after it starts.
 
+From version 0.7.0 a node does not need an agreement to get started.
+Fetching uses only the commands any reader uses, which every node answers,
+so a node also **finds peers by itself**: it picks a few of the nodes that
+announce themselves (below), checks that each has the key it announced,
+and catches up from them - and they do the same with it. Posts then flow
+both ways without anybody arranging it, and the network grows and heals on
+its own. Agreed peers are still worth having: they push new posts at once
+instead of within the hour.
+
 ## Finding the network
 
 A new client has to start somewhere. It ships with a **node list**: a

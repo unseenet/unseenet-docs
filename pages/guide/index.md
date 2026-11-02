@@ -54,8 +54,8 @@ else sees them. → [Your own rules](rules.md)
 
 **Nodes are onion services.** Anyone can run one, on a Raspberry Pi or a
 free VM, with no public address. Nodes peer with nodes their operators
-choose, check everything they receive, and forget posts after the group's
-retention period. → [The node](node.md)
+choose, find more by themselves, check everything they receive, and forget
+posts after the group's retention period. → [The node](node.md)
 
 **One core, many clients.** The terminal client, the graphical client, the
 browser version and the command line all use the same core, which holds
